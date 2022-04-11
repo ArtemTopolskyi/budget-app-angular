@@ -1,0 +1,20 @@
+<div class='transactions-container'>
+  <div class='transactions-container__header'>
+    <h1 class='transactions-container__heading'>
+      Транзакции
+    </h1>
+
+    <button
+      class='transactions-container__add-button'
+      (click)="openModal()"
+    >
+      Добавить
+    </button>
+  </div>
+
+  <app-time-period-selector>
+  </app-time-period-selector>
+
+ <app-operation-container>
+ </app-operation-container>
+</div>

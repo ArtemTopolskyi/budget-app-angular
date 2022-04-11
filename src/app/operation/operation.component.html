@@ -1,0 +1,14 @@
+<div 
+  [class]="['operation', classByCategory(operation.category)]"
+>
+  <div class="operation__info">
+    <div class="operation__description">
+      <p class="operation__label">{{ getName(operation.category) }}</p>
+      <p class="operation__details">{{formatDate(operation.date)}}</p>
+    </div>
+  </div>
+  <p className="operation__sum">
+    <span *ngIf="isNegative(operation.type)">-</span>
+    {{ operation.sum }}
+  </p>
+</div>

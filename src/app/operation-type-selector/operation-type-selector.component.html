@@ -1,0 +1,17 @@
+<ul class='operation-types'>
+  <li
+    class='operation-types__type'
+    [class.active]="isActive(OperationType.Waste)"
+    (click)="changeOperationType(OperationType.Waste)"
+  >
+    Расходы
+  </li>
+
+  <li
+    class='operation-types__type'
+    [class.active]="isActive(OperationType.Income)"
+    (click)="changeOperationType(OperationType.Income)"
+  >
+    Доходы
+  </li>
+</ul>

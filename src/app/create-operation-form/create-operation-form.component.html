@@ -1,0 +1,47 @@
+<form>
+  <div class='input-container'>
+    <label class='label'>
+      <div class='label__text'>
+        Сумма
+      </div>
+
+      <input
+        class='input'
+        type='text'
+        [formControl]="sum"
+      />
+    </label>
+
+    <label class='label'>
+      <div class='label__text'>
+        Дата
+      </div>
+
+      <input
+        className='input'
+        type="date"
+        [formControl]="date"
+      />
+    </label>
+  </div>
+
+  <label class='label'>
+      <div class='label__text'>
+        Категория
+      </div>
+  </label>
+
+  <app-category-selector
+    [selectedCategory]="selectedCategory"
+    (setCategoryEvent)="setCategory($event)"
+  >
+  </app-category-selector>
+
+  <button
+    type='button'
+    class='form-button'
+    (click)="onAdd()"
+  >
+    Добавить
+  </button>
+</form>
